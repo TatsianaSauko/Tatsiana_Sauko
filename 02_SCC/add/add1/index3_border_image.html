@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border_image</title>
+    <style>
+        .container {
+            background-color: #eceaea;
+        }
+        .block {
+            width: 15em;
+            background-color: #e0dddd;
+            float: left;
+        }
+        .article {
+            /*background-color: #cac8c8;*/
+            background: #fff;
+            display: inline-block;
+            border-width: 2.5em;
+            width:50%;
+            border-style: solid;
+            border-image-source: url('backgroung/img/ramka.png') ;
+            border-image-slice: 100;
+            border-image-repeat: stretch;
+            border-image-width: 2;
+        }
+        .bottom {
+            background-color: #eceaea;
+            margin-top: .2em;
+        }
+        img {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="block">
+        <h3>Блок навигации</h3>
+        <ul>
+            <li>Ширина 15em</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагаться слева</li>
+            <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,
+                как показано в данном примере</li>
+        </ul>
+    </div>
+    <div class="article">
+        <h2>Статья 1</h2>
+        Размер блока: занимает всю доступную ширину<br>
+        Должен присутствовать цвет фона<br>
+        Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
+        bottom
+    </div>
+    <div class="article">
+        <h2>Статья 2</h2>
+        Занимает всю доступную ширину<br>
+        Должен присутствовать цвет фона<br>
+        Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
+        bottom. Картинка вставлена при помощи тега, плавание организовано по правому краю внутри<br>
+        данной статьи для этой картинки.
+    </div>
+</div>
+<div class="bottom">Нижний блок, подвал. Занимает всю доступною ширину. Высота определяется помещённым внутрь
+    контентом.
+</div>
+</body>
+</html>
