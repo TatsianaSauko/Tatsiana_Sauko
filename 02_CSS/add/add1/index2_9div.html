@@ -7,24 +7,33 @@
         .container {
             background-color: #eceaea;
         }
+
         .block {
             width: 15em;
             background-color: #e0dddd;
             float: left;
         }
+
         .article {
-         background-color: #cac8c8;
-         display: inline-block;
+            background-color: #cac8c8;
+            margin-bottom: .2em;
+            margin-left: 240px;
 
         }
+
         .bottom {
-            background-color: #eceaea;
+            background-color: #e0dddd;
             margin-top: .2em;
         }
+
         img {
             background-image: url("icon_mail.png");
             float: right;
         }
+        .clear {
+            clear: both;
+        }
+
     </style>
 </head>
 <body>
@@ -40,7 +49,7 @@
             </li>
         </ul>
     </div>
-    <div class="article" style=" width:50%; background: url('bound/l.gif') repeat-y left">
+    <div class="article" style="background: url('bound/l.gif') repeat-y left">
         <div style="background: url('bound/t.gif') repeat-x top">
             <div style="background: url('bound/r.gif') repeat-y right">
                 <div style="background: url('bound/b.gif') repeat-x bottom">
@@ -63,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div class="article" style=" width:50%; background: url('backgroung/img/l.png') repeat-y left">
+    <div class="article" style="background: url('backgroung/img/l.png') repeat-y left">
         <div style="background: url('backgroung/img/t.png') repeat-x top">
             <div style="background: url('backgroung/img/r.png') repeat-y right">
                 <div style="background: url('backgroung/img/b.png') repeat-x bottom">
@@ -71,7 +80,7 @@
                         <div style="background: url('backgroung/img/r-t.png') no-repeat top right">
                             <div style="background: url('backgroung/img/l-b.png') no-repeat bottom left">
                                 <div style="background: url('backgroung/img/r-b.png') no-repeat bottom right">
-                                    <div style="padding:2.5em; padding-bottom: 150px" class="img">
+                                    <div style="padding:2.5em" class="img">
                                         <h2>Статья 2</h2>
                                         Размер блока:<br>
                                         Занимает всю доступную ширину<br>
@@ -80,6 +89,7 @@
                                         bottom. Картинка вставлена при помощи тега, плавание организовано по правому краю внутри<br>
                                         данной статьи для этой картинки.
                                         <img src="icon_mail.png">
+                                        <div class="clear"></div>
                                     </div>
                                 </div>
                             </div>

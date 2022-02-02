@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>Block</title>
     <style>
-        div{
-            width: 1000px;
-            margin: auto;
-        }
         .container {
             background-color: #eceaea;
         }
@@ -17,14 +13,10 @@
             float: left;
         }
         .article {
-            width: 76%;
             background-color: #cac8c8;
             margin-bottom: .2em;
             margin-left: 240px;
             padding-top:  5px;
-        }
-        .bot{
-            padding-bottom: 125px;
         }
         .bottom {
             background-color: #e0dddd;
@@ -39,7 +31,6 @@
     </style>
 </head>
 <body>
-<div>
     <div class="container">
         <div class="block">
             <h3>Блок навигации</h3>
@@ -59,22 +50,19 @@
             Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
             bottom
         </div>
-        <div class="article bot"><h3>Статья 2</h3>
+        <div class="article"><h3>Статья 2</h3>
             Размер блока:<br>
             Занимает всю доступную ширину<br>
             Должен присутствовать цвет фона<br>
             Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
             bottom. Картинка вставлена при помощи тега, плавание организовано по правому краю внутри<br>
             данной статьи для этой картинки.<br>
-
             <img src="icon_mail.png" alt="letter">
+            <div class="clear"></div>
         </div>
-        <div class="clear"></div>
     </div>
-
     <div class="bottom">Нижний блок, подвал. Занимает всю доступною ширину. Высота определяется помещённым внутрь
         контентом.
     </div>
-</div>
 </body>
 </html>

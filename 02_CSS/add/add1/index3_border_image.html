@@ -7,29 +7,37 @@
         .container {
             background-color: #eceaea;
         }
+
         .block {
             width: 15em;
             background-color: #e0dddd;
             float: left;
         }
+
         .article {
-            /*background-color: #cac8c8;*/
-            background: #fff;
-            display: inline-block;
+            background-color: #cac8c8;
             border-width: 2.5em;
-            width:50%;
+            margin-bottom: .2em;
+            margin-left: 240px;
             border-style: solid;
-            border-image-source: url('backgroung/img/ramka.png') ;
+            border-image-source: url('backgroung/img/ramka.png');
             border-image-slice: 100;
             border-image-repeat: stretch;
             border-image-width: 2;
+
         }
+
         .bottom {
-            background-color: #eceaea;
+            background-color: #e0dddd;
             margin-top: .2em;
         }
+
         img {
             float: right;
+        }
+
+        .clear {
+            clear: both;
         }
     </style>
 </head>
@@ -42,7 +50,8 @@
             <li>Должен присутствовать цвет фона</li>
             <li>Располагаться слева</li>
             <li>Блок навигации наполните контентом достаточным, чтобы по высоте он начинал захватывать вторую статью,
-                как показано в данном примере</li>
+                как показано в данном примере
+            </li>
         </ul>
     </div>
     <div class="article">
@@ -59,6 +68,8 @@
         Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
         bottom. Картинка вставлена при помощи тега, плавание организовано по правому краю внутри<br>
         данной статьи для этой картинки.
+        <img src="icon_mail.png" alt="letter">
+        <div class="clear"></div>
     </div>
 </div>
 <div class="bottom">Нижний блок, подвал. Занимает всю доступною ширину. Высота определяется помещённым внутрь

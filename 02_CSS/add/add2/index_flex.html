@@ -2,43 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bound</title>
+    <title>Flexbox</title>
     <style>
         .container {
             background-color: #eceaea;
-            width: 984px;
         }
         .block {
             width: 15em;
             background-color: #e0dddd;
-            float: left;
+            display: flex;
+            flex-wrap: wrap;
+            align-self: flex-start;
         }
         .article {
             background-color: #cac8c8;
             margin-bottom: .2em;
-            display: inline-block
         }
         .bottom {
             background-color: #eceaea;
             margin-top: .2em;
-            width: 984px;
         }
         img {
             float: right;
         }
-        div .bound1 {
-            padding: 2.5em;
-            background-color: #ccc;
-            background-image: url(bound/b-r.gif), url(bound/b-l.gif), url(bound/t-l.gif), url(bound/t-r.gif), url(bound/l.gif), url(bound/r.gif), url(bound/t.gif), url(bound/b.gif);
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-y, repeat-y, repeat-x, repeat-x;
-            background-position: bottom right, bottom left, top left, top right, left, right, top, bottom;
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
-        div .bound2 {
-            padding: 2.5em;
-            background-color: #ccc;
-            background-image: url(backgroung/img/r-b.png), url(backgroung/img/l-b.png), url(backgroung/img/l-t.png), url(backgroung/img/r-t.png), url(backgroung/img/l.png), url(backgroung/img/r.png), url(backgroung/img/t.png), url(backgroung/img/b.png);
-            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-y, repeat-y, repeat-x, repeat-x;
-            background-position: bottom right, bottom left, top left, top right, left, right, top, bottom;
+        .container{
+            display: flex;
+            flex-direction: row;
         }
     </style>
 </head>
@@ -55,18 +49,18 @@
             </li>
         </ul>
     </div>
-    <div>
-        <div class="article bound1"><h3>Статья 1</h3>
+    <div class="column">
+        <div class="article"><h3>Статья 1</h3>
             Размер блока: занимает всю доступную ширину<br>
             Должен присутствовать цвет фона<br>
-            Во всех "статьях" следуйте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
+            Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
             bottom
         </div>
-        <div class="article bound2"><h3>Статья 2</h3>
+        <div class="article"><h3>Статья 2</h3>
             Размер блока:<br>
             Занимает всю доступную ширину<br>
             Должен присутствовать цвет фона<br>
-            Во всех "статьях" следуйте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
+            Во всех "статьях" сделайте отступ снизу от соседней равным .2em, при помощи свойства margin-<br>
             bottom. Картинка вставлена при помощи тега, плавание организовано по правому краю внутри<br>
             данной статьи для этой картинки.
             <img src="icon_mail.png" alt="letter">
