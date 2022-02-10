@@ -46,8 +46,8 @@
     }
 </style>
 <body>
-<table class="expand">
-    <tr class="one">
+<table id="tab">
+    <tr id="tr1">
         <th>ФИО</th>
         <th>пол</th>
         <th>должность</th>
@@ -55,7 +55,7 @@
         <th>Данные 01</th>
         <th>Данные 02</th>
     </tr>
-    <tr class="two">
+    <tr id="tr2">
         <td class="lc">Иванов Иван Иванович</td>
         <td>М</td>
         <td>начальник</td>
@@ -63,7 +63,7 @@
         <td>4567</td>
         <td>3453</td>
     </tr>
-  <tr class="three">
+  <tr id="tr3">
       <td class="lc">Петрова Иллона Петровна</td>
       <td>Ж</td>
       <td>секретарь</td>
@@ -71,7 +71,7 @@
       <td>98795</td>
       <td>46523</td>
   </tr>
-    <tr class="four">
+    <tr id="tr4">
         <td class="lc">Сидоров Илья Игоревич</td>
         <td>М</td>
         <td>бухгалтер</td>
@@ -79,7 +79,7 @@
         <td>743534</td>
         <td>987979</td>
     </tr>
-    <tr class="five">
+    <tr id="tr5">
         <td class="lc">Пупин Фёдор Фёдорович</td>
         <td>М</td>
         <td>водитель</td>
@@ -90,41 +90,23 @@
     <tr>
 </table>
 <p>данные о сотрудниках</p>
-<button class="button">Показать все строки</button>
+<button class="button">Нет скрытых строк</button>
 
 <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function ($) {
-         $(".one").click(function (){
-             $(".one").slideUp()
+     $(document).ready(function ($) {
+         $("#tab tr:gt(0)").click(function (){
+             $(this).hide();
+             $(".button").text("Показать все строки");
          })
-        $(".two").click(function (){
-            $(".two").slideUp()
-        })
-        $(".three").click(function (){
-            $(".three").slideUp()
-        })
-        $(".four").click(function (){
-            $(".four").slideUp()
-        })
-        $(".five").click(function (){
-            $(".five").slideUp()
-        })
         $(".button").click(function (){
-               $(".two").slideDown()
-          }).click(function (){
-             $(".three").slideDown()
-             }).click(function () {
-                     $(".four").slideDown()
-                 }).click(function () {
-             $(".five").slideDown()
-         }).click(function () {
-             $(".one").slideDown()
-         })
-    });
+            $("#tab tr:gt(0)").show();
+            $(this).text("Нет скрытых строк");
+        })
+    })
 </script>
 </body>
 </html>

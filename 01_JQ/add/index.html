@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQ</title>
+</head>
+
+<style>
+    input[type="text"] {
+        width: 30%;
+    }
+
+</style>
+<body>
+<div><h1>Проверка пароля</h1></div>
+<form action="http://fe.it-academy.by/TestForm.php" method="post" name="form" action="">
+<fieldset>
+    <label ><input class="password" type="text"  required > * Пароль</label><br><br>
+    <label ><input class="cor_password" type="text" required > * Повторите пароль</label><br><br>
+    <input id="submit" type="submit" value=Отправить>
+</fieldset>
+</form>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+
+<script>
+        $(document).ready(function() {
+            $('input[type="text"]').keyup(function (){
+                $(".password").css("backgroundColor", "green");
+                $(".cor_password").css("backgroundColor", "green");
+            })
+            $(".cor_password").on("keyup", function() {
+                var value_input1 = $(".password").val();
+                var value_input2 = $(this).val();
+
+                if(value_input1 != value_input2) {
+
+                    $(".password").css("backgroundColor", "red");
+                    $(".cor_password").css("backgroundColor", "red");
+                    $("#submit").attr("disabled", "disabled");
+                } else {
+                    $("#submit").removeAttr("disabled");
+                }
+            });
+        });
+
+</script>
+</body>
+</html>
